@@ -16,6 +16,8 @@ R::setup(
 $gewicht = $_GET['gewicht'];
 
 //opslaan waarde van weeschaal in custom DB in tabel weging
+if($_GET['key']  != $SuperGeheimeKey) exit();
+
 $weging = R::dispense( 'weging' );
 $weging->gewicht = $gewicht;
 $weging->datum = date("Y-m-d", strtotime("-1 days"));
