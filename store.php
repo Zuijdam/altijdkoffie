@@ -1,12 +1,15 @@
 <?php
 //R::debug(false);
 // includes
-require 'Includes/rb-mysql.php';
+require 'include/rb-mysql.php';
+include config.php;
 
 // db connectie
-R::setup( 'mysql:host=localhost;dbname=huetlaan',
-'root', 'NJM5aZzLpppXFz1!' ); //for both mysql or mariaDB 
-
+R::setup(
+    'mysql:host=localhost;dbname=' . $DatabaseName,
+    $DatabaseUser,
+    $DatabasePassword
+  );
 
 //opslaan waarde van weeschaal in custom DB in tabel weging
 $weging = R::dispense( 'weging' );
