@@ -35,7 +35,7 @@ jobs:
           # FTP user
           user: altijdkoffie@erikvanzuijdam.nl
           # FTP password
-          password: CooCoo00!!
+          password: ipsum
           # Force SSL encryption
           #forceSsl: # optional, default is false
           # Local directory
