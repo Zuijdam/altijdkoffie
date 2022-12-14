@@ -35,7 +35,7 @@ jobs:
           # FTP user
           user: altijdkoffie@erikvanzuijdam.nl
           # FTP password
-          password: ipsum
+          password: ${{ secrets.FTPkey }}
           # Force SSL encryption
           #forceSsl: # optional, default is false
           # Local directory
