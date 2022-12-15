@@ -14,8 +14,11 @@ R::setup(
 
 $wegingen = R::findAll('weging','LIMIT 10');
 
+
+echo "<pre>";
 foreach ($wegingen as $value) {
-  echo $value . "\n";
+  echo $value . "<br>";
 }
+echo "</pre>";
 
 ?>
