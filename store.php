@@ -20,8 +20,7 @@ if($_GET['key']  != $SuperGeheimeKey) exit();
 
 $weging = R::dispense( 'weging' );
 $weging->gewicht = $gewicht;
-$weging->datum = date("Y-m-d", strtotime("-1 days"));
-$weging->time = time();
+$weging->datum = date("Y-m-d H:i:s", $timestamp);
 $id = R::store( $weging );
 
 
