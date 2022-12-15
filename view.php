@@ -14,6 +14,8 @@ R::setup(
 
 $wegingen = R::findAll('weging','LIMIT 10');
 
-echo $wegingen;
+foreach ($wegingen as $value) {
+  echo $value . "\n";
+}
 
 ?>
