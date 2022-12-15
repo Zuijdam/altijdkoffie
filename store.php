@@ -23,4 +23,8 @@ $weging->gewicht = $gewicht;
 $weging->datum = date("Y-m-d", strtotime("-1 days"));
 $id = R::store( $weging );
 
+
+// laatste waarde laten zien op het scherm
+$weging= R::load('weging',$id);
+echo $weging->gewicht;
 ?>
