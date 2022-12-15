@@ -14,14 +14,13 @@ R::setup(
 // opslaan van waarde uit de querystring in een variabele
 
 $gewicht = $_GET['gewicht'];
-$timestamp = time();
 
 //opslaan waarde van weeschaal in custom DB in tabel weging
 if($_GET['key']  != $SuperGeheimeKey) exit();
 
 $weging = R::dispense( 'weging' );
 $weging->gewicht = $gewicht;
-$weging->datum = date("Y-m-d H:i:s", $timestamp);
+$weging->datum = date("Y-m-d H:i:s");
 $id = R::store( $weging );
 
 
