@@ -12,7 +12,7 @@ R::setup(
 
   // laten zien laatste 10 wegingen
 
-$wegingen = R::findAll('weging','LIMIT 10');
+$wegingen = R::findAll('weging','ORDER BY id DESC LIMIT 10');
 
 
 echo "<pre>";
