@@ -14,6 +14,7 @@ R::setup(
 // opslaan van waarde uit de querystring in een variabele
 
 $gewicht = $_GET['gewicht'];
+$timestamp = time();
 
 //opslaan waarde van weeschaal in custom DB in tabel weging
 if($_GET['key']  != $SuperGeheimeKey) exit();
