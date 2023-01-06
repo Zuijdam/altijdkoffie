@@ -33,5 +33,15 @@ $gemiddelde = $totaal / count($wegingen);
 
 echo "Het gemiddelde gewicht van de afgelopen 30 waarden is " . $gemiddelde;
 
+// Zoek de laatste rij met een waarde in het veld 'tare'
+$weging = R::findOne('weging', 'tare IS NOT NULL ORDER BY id DESC LIMIT 1');
+
+// Als er een rij is gevonden, haal de waarde op uit het veld 'tare'
+if ($weging) {
+  $laatsteTare = $weging->tare;
+  echo "De laatste waarde in het veld 'tare' is " . $laatsteTare;
+} else {
+  echo "Er is geen waarde gevonden in het veld 'tare'";
+}
 
 ?>
