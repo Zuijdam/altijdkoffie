@@ -24,6 +24,14 @@ foreach ($wegingen as $value) {
 }
 echo "</pre>";
 
+// Bereken het gemiddelde van het veld 'gewicht'
+$totaal = 0;
+foreach($wegingen as $weging) {
+  $totaal += $weging->gewicht;
+}
+$gemiddelde = $totaal / count($wegingen);
+
+echo "Het gemiddelde gewicht van de afgelopen 30 waarden is " . $gemiddelde;
 
 
 ?>
