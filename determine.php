@@ -50,8 +50,9 @@ $verschil = abs($laatsteTare - $gemiddelde);
 $procent = $verschil / $laatsteTare * 100;
 
   // Als het verschil groter is dan xx%, toon een melding
-  if ($procent > 2) {
-    echo "Het verschil tussen laatsteTare en het gemiddelde is groter dan 50%!";
+  if ($procent > 50) {
+    echo "<br>";
+    echo "Het verschil tussen laatsteTare en het gemiddelde is groter dan 50%! KOFFIE BESTELLEN MAAR!!!!";
   }
 
 ?>
