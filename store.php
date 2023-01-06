@@ -28,6 +28,7 @@ $id = R::store( $weging );
 
 if (isset($_GET['type']) && $_GET['type'] == "tare") {
 $weging = R::dispense( 'weging' );
+$weging->gewicht = $gewicht;
 $weging->tare = $gewicht;
 $weging->datum = date("Y-m-d H:i:s");
 $id = R::store( $weging );
