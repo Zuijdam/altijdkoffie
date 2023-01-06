@@ -32,6 +32,7 @@ foreach($wegingen as $weging) {
 $gemiddelde = $totaal / count($wegingen);
 
 echo "Het gemiddelde gewicht van de afgelopen 30 waarden is " . $gemiddelde;
+echo "<br>";
 
 // Zoek de laatste rij met een waarde in het veld 'tare'
 $weging = R::findOne('weging', 'tare IS NOT NULL ORDER BY id DESC LIMIT 1');
@@ -43,5 +44,14 @@ if ($weging) {
 } else {
   echo "Er is geen waarde gevonden in het veld 'tare'";
 }
+
+// en hier de berekening om iets te doen als het verschil groter is den 50%
+$verschil = abs($laatsteTare - $gemiddelde);
+$procent = $verschil / $laatsteTare * 100;
+
+  // Als het verschil groter is dan xx%, toon een melding
+  if ($procent > 2) {
+    echo "Het verschil tussen laatsteTare en het gemiddelde is groter dan 50%!";
+  }
 
 ?>
