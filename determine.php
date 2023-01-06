@@ -15,7 +15,7 @@ R::setup(
 // Bepaal het verschil tussen het gemm. en de tare
 // Als dat hoger is dan 50% dan geef een melding 'er is koffie nodig!!!'
 
-$wegingen = R::findAll('weging','ORDER BY id DESC LIMIT 30');
+$wegingen = R::findAll('weging','ORDER BY id DESC LIMIT 5');
 
 
 echo "<pre>";
