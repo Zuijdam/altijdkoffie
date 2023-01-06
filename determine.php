@@ -31,12 +31,12 @@ echo "</pre>";
 $tijd = time() - 1800; // tijd 30 minuten geleden
 $waarden = R::find('weging', 'datum > ?', [$tijd]);
 
-$waardenArray = array();
+echo "<pre>";
 foreach($waarden as $waarde) {
-  $waardenArray[] = $waarde;
+    echo $waarde . "<br>";
 }
+echo "</pre>";
 
-// Gebruik de array
-print_r($waardenArray);
+
 
 ?>
