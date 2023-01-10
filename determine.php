@@ -50,9 +50,34 @@ $verschil = abs($laatsteTare - $gemiddelde);
 $procent = $verschil / $laatsteTare * 100;
 
   // Als het verschil groter is dan xx%, toon een melding
-  if ($procent > 50) {
+  if ($procent > 90) {
     echo "<br>";
     echo "Het verschil tussen laatsteTare en het gemiddelde is groter dan 50%! KOFFIE BESTELLEN MAAR!!!!";
+
+    // Initialize cURL session
+    $ch = curl_init();
+  
+    // Set the URL to be called
+    curl_setopt($ch, CURLOPT_URL, "https://api.telegram.org/bot5947057302:AAERSxw-Q9BlgMit9cK-2TBkdMkCKP2NoQo/sendMessage?chat_id=-1001228018473&text=Volgens mij is de koffie op.");
+  
+    // Set the method to GET
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+  
+    // Return the response, don't print it
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  
+    // Execute the cURL session
+    $response = curl_exec($ch);
+  
+    // Close the cURL session
+    curl_close($ch);
+  
+    // Print the response
+    echo $response;
+  
+
+
+    
   }
 
 ?>
