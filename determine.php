@@ -56,9 +56,10 @@ $procent = $verschil / $laatsteTare * 100;
   
     $url = "https://api.telegram.org/" . $bot ."/sendMessage?chat_id=-1001228018473&text=koffietijd!";
     $contents = file_get_contents($url);
-  
+    echo "<pre>";
     echo $contents;
-    
+    echo "</pre>";
+
   }
 
 ?>
