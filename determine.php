@@ -75,8 +75,9 @@ $procent = $verschil / $laatsteTare * 100;
     // Print the response
     echo $response;
   
-
-
+    if ($response === false) {
+      echo 'Curl error: ' . curl_error($ch);
+  }
     
   }
 
