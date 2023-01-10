@@ -53,10 +53,10 @@ $procent = $verschil / $laatsteTare * 100;
   if ($procent > 5 ) {
     echo "<br>";
     echo "Het verschil tussen laatsteTare en het gemiddelde is groter dan 50%! KOFFIE BESTELLEN MAAR!!!!";
-
-    $url = "https://api.telegram.org/" . $bot ."/sendMessage?chat_id=-1001228018473&text=hi";
+  
+    $url = "https://api.telegram.org/" . $bot ."/sendMessage?chat_id=-1001228018473&text=koffietijd!";
     $contents = file_get_contents($url);
-    
+  
     echo $contents;
     
   }
